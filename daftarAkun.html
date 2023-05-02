@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobatHewan</title>
+    <link rel="icon" href="assets/images/tab-logo.png">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/jquery.js"></script>
+    <script src="assets/jquery/daftarAkun.js"></script>
+    <link rel="stylesheet" href="assets/proyek.css">
+    <link rel="stylesheet" href="assets/landingPageStyle.css">
+    <link rel="stylesheet" href="assets/formAkun.css">
+</head>
+<body>
+    <div>
+        
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="loginLandingPage.html">
+                    <span class="brand-name">SobatHewan</span>
+                    <img src="assets/images/web-logo.png" height="30"px class="d-inline-block align-top" alt="landingPage.html">
+                </a>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="opening-jumbotron-text">
+                            <br/><br/><br/>
+                            <h1 style="font-weight: 900;">Form Daftar Akun</h1>
+                            <h6>silahkan isi data diri Anda untuk membuat akun baru</h6>
+                            <br/><br/><br>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br/><br/>
+        <form method="POST" onsubmit="return validasi1();" action="suksesRegistrasi.html">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Isi data akun Anda</h3>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="name" class="text">Nama Lengkap</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="input" id="nama">
+                        <p id="alert-nama" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="username" class="text" >Username</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="input" id="username">
+                        <p id="alert-username" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="password" class="text">Password</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="password" class="input" id="password">
+                        <p id="alert-password" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="password" class="text">Konfirmasi Password</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="password" class="input" id="passwordUlang">
+                        <p id="alert-passwordUlang" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="birthdate" class="text">Tanggal Lahir</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="date" class="input" id="tanggalLahir">
+                        <p id="alert-tanggalLahir" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nomortelp" class="text">Nomor Telepon</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="input" id="noTelp">
+                        <p id="alert-noTelp" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="email" class="text">Email</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="input" id="email">
+                        <p id="alert-email" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="kota" class="text">Kota/Kabupaten</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="input" id="kabupaten">
+                        <p id="alert-kabupaten" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="provinsi" class="text">Provinsi</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="input" id="provinsi">
+                        <p id="alert-provinsi" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="Alamat" class="text">Alamat</label>
+                    </div>
+                    <div class="col-md-6">
+                        <textarea name="" class="input" cols="34" rows="3" id="alamat"></textarea> <!--ATUR UKURAN DAN FOKUS WARNA-->
+                        <p id="alert-alamat" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="submit" class="btn-submit" id="btn-submit" value="Daftar"/>
+                    </div>
+                </div>
+                <br>
+                
+                </div>
+                <br>
+                 
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <center><p>Sudah memiliki akun? Silahkan login <a href="loginLandingPage.html" id="disini">disini</a> </p></center> <!--Pergi ke login-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+        <br/><br/>
+
+        <div class="jumbotron footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 footer-left">
+                        <h6 class="footer-title">Contact Us</h6><br/>
+                        <p class="footer-subtitle">+62 811 5338 123</p>
+                        <p class="footer-subtitle">sobathewan@gmail.com</a>
+                        <p class="footer-subtitle">12, Petisah, Medan, Indonesia</p>
+                    </div>
+                    <div class="col-md-6 footer-right">
+                        <h6 class="footer-title">Social Media</h6>
+                        <div class="social-media">
+                            <a href="https://facebook.com" class="link-to-social-media">
+                                <img src="assets/images/socialmedia/facebook-logo.png" width="70"px/>
+                            </a>
+                            <a href="https://instagram.com" class="link-to-social-media">
+                                <img src="assets/images/socialmedia/instagram-logo.png" width="70"px/>
+                            </a>
+                            <a href="https://twitter.com" class="link-to-social-media">
+                                <img src="assets/images/socialmedia/twitter-logo.png" width="70"px/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

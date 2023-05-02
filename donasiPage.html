@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobatHewan</title>
+    <link rel="icon" href="assets/images/tab-logo.png">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/jquery.js"></script>
+    <script src="assets/jquery/jquery-ui.js"></script>
+    <script src="assets/jquery/donasiPage.js"></script>
+    <link rel="stylesheet" href="assets/jquery/jquery-ui.css">
+    <link rel="stylesheet" href="assets/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/proyek.css">
+    <link rel="stylesheet" href="assets/donasiPageStyle.css">
+    <script>
+        $(document).ready(function(){
+        $("#tabs-donasi").tabs();
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="landingPage.html">
+                <span class="brand-name">SobatHewan</span>
+                <img src="assets/images/web-logo.png" height="30"px class="d-inline-block align-top" alt="landingPage.html">
+            </a>
+            <ul>
+                <li><a href="landingPage.html">Beranda</a></li>
+                <li><a href="daftarhewan.html">Daftar Hewan</a></li>
+                <li><a href="donasiPage.html">Donasi</a></li>
+                <li>
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="assets/images/logo-user.png" width="20"px/>
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="loginLandingPage.html">Logout</a>
+                        </div>
+                    </div>                        
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="title-jumbotron-text">Form Pengajuan Donasi</h5>
+                    <p class="subtitle-jumbotron-text">silahkan isi form di bawah untuk berdonasi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+    <div class="container">
+        <div id="tabs-donasi">
+            <ul>
+                <li><a href="#tabs-1">Donasi Hewan</a></li>
+                <li><a href="#tabs-2">Donasi Dana</a></li>
+            </ul>
+
+            <div id="tabs-1">
+                <br/>
+                <h2>Isi kuesioner di bawah</h2>
+                <br/>
+                <form method="POST" onsubmit="return validasi1();" action="suksesHewan.html">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Apakah anda pernah Mendonasikan Hewan?</p>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="radio" id="radio-select-1" name="radio1" class="radio-select-1" value="Haseo">
+                            <label for="radio-select-1">Ya , pernah </label>
+                            <p id="alert-check-radio1" style="color: rgb(167, 22, 22);"></p>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="radio" id="radio-select-2" name="radio1" class="radio-select-2" value="Guioq">
+                            <label for="radio-select-2">Tidak pernah </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Berapa banyak Hewan peliharaan yang akan di donasikan?</p>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="selection1" name="option1" class="selection1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Alasan mendonasikan Hewan?</p>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="selection1" name="option1" class="selection1">
+                                <option value="Mantap">Tidak mampu mengurus</option>
+                                <option value="Amen">Hewan yang akan didonasi merupakan di temukan</option>
+                                <option value="Luar Biasa">Biaya perawatan hewan yang mahal</option>
+                                <option value="Gilagilagila">Tidak menyukai jenis hewann </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Apa alasan anda mendonasikan hewan pada Sobat hewan ?</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="checkbox1" name="check1" class="checkbox1" value="Dolore"/>
+                            <label for="checkbox1">Mudah</label>
+                            <br/>
+                            <input type="checkbox" id="checkbox2" name="check1" class="checkbox2" value="Magna"/>
+                            <label for="checkbox2">Efektif</label>
+                            <br/>
+                            <input type="checkbox" id="checkbox3" name="check1" class="checkbox3" value="Aliqua"/>
+                            <label for="checkbox3">Banyak pengunjung</label>
+                            <br/>
+                            <input type="checkbox" id="checkbox4" name="check1" class="checkbox4" value="Adipiscing"/>
+                            <label for="checkbox4">Terpercaya</label>
+                            <br/>
+                            <input type="checkbox" id="checkbox5" name="check1" class="checkbox5" value="Onsectetur"/>
+                            <label for="checkbox5">Berkuailtas</label>
+                            <br/>
+                            <p id="alert-checkbox1" style="color: rgb(167, 22, 22);"></p>
+                        </div>
+                    </div>
+                    
+                    <br/>
+
+                    <h2>Isi data hewan Anda</h2>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Nama Hewan</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="nama-hewan" class="nama-hewan" placeholder="Isi nama hewan Anda...">
+                            <p id="alert-nama-hewan" style="color: rgb(167, 22, 22);"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Jenis Hewan</p>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="selection2" name="option2" class="selection2">
+                                <option value="Anjing">Anjing</option>
+                                <option value="Kucing">Kucing</option>
+                                <option value="Kura-Kura">Kura-Kura</option>
+                                <option value="Buaya">Buaya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Deskripsi Hewan</p>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea name="deksripsi-hewan" id="deskripsi-hewan" cols="35"></textarea>
+                            <br/>
+                            <p id="alert-deskripsi-hewan" style="color: rgb(167, 22, 22);"></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Upload Foto Hewan</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="file" class="btn-file" id="btn-file" required/>
+                        </div>
+                    </div>
+
+                    <br/>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn-submit" id="btn-submit" value="Kirim"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="tabs-2">
+                <br/>
+                <h2>Isi kuesioner di bawah</h2>
+                <br/>
+                <form method="POST" action="suksesDonasiDana.html" onsubmit="return validasi2();">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Apakah anda pernah mendonasikan dana sebelumnya?</p>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="radio" id="radio-select-3" name="radio2" class="radio-select-3" value="Olore"/>
+                            <label for="radio-select-3">Ya, pernah</label>
+                            <p id="alert-check-radio2" style="color: rgb(167, 22, 22);"></p>
+                        </div>
+                        <div>
+                            <input type="radio" id="radio-select-4" name="radio2" class="radio-select-4" value="Aliqu"/>
+                            <label for="radio-select-4">Tidak pernah </label> 
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                    <div class="col-md-6">
+                        <p class="quetioner-statement">Alasan anda mendonasikan dana  pada sobat hewan?</p>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="checkbox1" name="check1" class="checkbox1" value="Dolore"/>
+                        <label for="checkbox1">Mudah</label>
+                        <br/>
+                        <input type="checkbox" id="checkbox2" name="check1" class="checkbox2" value="Magna"/>
+                        <label for="checkbox2">Efektif</label>
+                        <br/>
+                        <input type="checkbox" id="checkbox3" name="check1" class="checkbox3" value="Aliqua"/>
+                        <label for="checkbox3">Terpercaya </label>
+                        <br/>
+                        <input type="checkbox" id="checkbox4" name="check1" class="checkbox4" value="Adipiscing"/>
+                        <label for="checkbox4">Terjamin</label>
+                        <br/>
+                        <input type="checkbox" id="checkbox5" name="check1" class="checkbox5" value="Onsectetur"/>
+                        <label for="checkbox5">Banyak hewan membutuhkan bantuan</label>
+                        <br/>
+                        <p id="alert-checkbox1" style="color: rgb(167, 22, 22);"></p>
+                    </div>
+                </div>
+
+                   <div class="row">
+                    <div class="col-md-6">
+                        <p class="quetioner-statement">Apakah yang alasan yang mendorong anda  mendonasikan dana pada sobat hewan?</p>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-control" id="selection1" name="option1" class="selection1">
+                            <option value="Mantap">Membantu perawatan hewan terlantar</option>
+                            <option value="Amen">Mengurangi Banyaknya hewan terlantar </option>
+                            <option value="Luar Biasa">Membantu Melestarikan hewan</option>
+                        </select>
+                    </div>
+                </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Nominal Pembayaran</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="number" id="nominal-pembayaran" class="nominal-pembayaran" name="nominalpembayaran" placeholder="Jumlah donasi Anda..."/>
+                            <p id="alert-nominal-pembayaran" style="color: rgb(167, 22, 22);"></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="quetioner-statement">Metode Pembayaran</p>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="selection4" name="option4" class="selection4">
+                                <option value="Transfer Bank">Transfer Bank</option>
+                                <option value="KartuKredit">Kartu Kredit</option>
+                                <option value="OVO">OVO</option>
+                                <option value="Go-Pay">Go-Pay</option>
+                                <option value="Dana">Dana</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <br/>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn-submit" id="btn-submit" value="Kirim"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+
+    </div>
+    </section> 
+    <br/><br/>
+    <div class="jumbotron footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 footer-left">
+                    <h6 class="footer-title">Contact Us</h6><br/>
+                    <p class="footer-subtitle">+62 811 5338 123</p>
+                    <p class="footer-subtitle">sobathewan@gmail.com</a>
+                    <p class="footer-subtitle">12, Petisah, Medan, Indonesia</p>
+                </div>
+                <div class="col-md-6 footer-right">
+                    <h6 class="footer-title">Social Media</h6>
+                    <div class="social-media">
+                        <a href="https://facebook.com" class="link-to-social-media">
+                            <img src="assets/images/socialmedia/facebook-logo.png" width="70"px/>
+                        </a>
+                        <a href="https://instagram.com" class="link-to-social-media">
+                            <img src="assets/images/socialmedia/instagram-logo.png" width="70"px/>
+                        </a>
+                        <a href="https://twitter.com" class="link-to-social-media">
+                            <img src="assets/images/socialmedia/twitter-logo.png" width="70"px/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

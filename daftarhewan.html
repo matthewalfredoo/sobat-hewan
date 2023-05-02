@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobatHewan</title>
+    <link rel="icon" href="assets/images/tab-logo.png">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/jquery.js"></script>
+    <script src="assets/jquery/searchFilter.js"></script>
+    <link rel="stylesheet" href="assets/proyek.css">
+    <link rel="stylesheet" href="assets/daftarhewan.css">
+</head>
+<body>
+    <div> 
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+              <a class="navbar-brand" href="landingPage.html">
+                  <span class="brand-name">SobatHewan</span>
+                  <img src="assets/images/web-logo.png" height="30"px class="d-inline-block align-top" alt="landingPage.html">
+              </a>
+              <ul>
+                <li><a href="landingPage.html">Beranda</a></li>
+                <li><a href="daftarhewan.html">Daftar Hewan</a></li>
+                <li><a href="donasiPage.html">Donasi</a></li>
+                <li>
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="assets/images/logo-user.png" width="20"px/>
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="loginLandingPage.html">Logout</a>
+                        </div>
+                    </div>                        
+                </li>
+            </ul>
+          </div>
+      </nav>
+
+      <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="title-jumbotron-text">Daftar Hewan</h5>
+                    <p class="subtitle-jumbotron-text">silahkan pilih daftar hewan di bawah untuk diadopsi</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <br/><br/>
+      <section>
+        <div class="container">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+          <ul id="myUL">
+            <div class="row">
+              <div class="col-md-4">
+                <li>
+                  <div class="card">
+                    <img src="./assets/images/jumbotron-showcase-aiko-cropped.png" class="card-img-top" alt="aiko">
+                    <div class="card-body">
+                      <h5 class="card-title">AIKO</h5>
+                      <p class="card-text">Hai kamu, aiko sedang menunggu teman bermain. Apakah kamu ingin menjadi teman aiko dan berbagi canda dan tawa? Ayo adopsi aiko sekarang.</p>
+                      <a href="detailPageAiko.html" class="btn btn-primary">Lihat Detail</a>
+                    </div>
+                  </div>
+                </li>
+              </div>
+
+              <div class="col-md-4">
+                <li>
+                  <div class="card">
+                    <img src="./assets/images/jumbotron-showcase-alba-cropped.png" class="card-img-top" alt="alba">
+                    <div class="card-body">
+                      <h5 class="card-title">ALBA</h5>
+                      <p class="card-text">Hai kamu, alba sedang menunggu teman bermain. Apakah kamu ingin menjadi teman alba dan berbagi canda dan tawa? Ayo adopsi alba sekarang.</p>
+                      <a href="detailPageAlba.html" class="btn btn-primary">Lihat Detail</a>
+                    </div>
+                  </div>
+                </li>
+              </div>
+
+              <div class="col-md-4">
+                <li>
+                  <div class="card">
+                    <img src="./assets/images/jumbotron-showcase-bruno-cropped.png" class="card-img-top" alt="bruno">
+                    <div class="card-body">
+                      <h5 class="card-title">BRUNO</h5>
+                      <p class="card-text">Hai kamu, bruno sedang menunggu teman bermain. Apakah kamu ingin menjadi teman bruno dan berbagi canda dan tawa? Ayo adopsi bruno sekarang.</p>
+                      <a href="detailPageBruno.html" class="btn btn-primary">Lihat Detail</a>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+            <br/><br/>
+            <div class="row">
+              <div class="col-md-4">
+                <li>
+                  <div class="card">
+                    <img src="./assets/images/laura-lugaresi-9T_iNPrHyXg-unsplash.jpg" class="card-img-top" alt="laura">
+                    <div class="card-body">
+                      <h5 class="card-title">LAURA</h5>
+                      <p class="card-text">Hai kamu, laura sedang menunggu teman bermain. Apakah kamu ingin menjadi teman laura dan berbagi canda dan tawa? Ayo adopsi laura sekarang..</p>
+                      <a href="detailPageLaura.html" class="btn btn-primary">Lihat Detail</a>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div class="col-md-4">
+                <li>
+                  <div class="card">
+                    <img src="./assets/images/robinson.jpg" class="card-img-top" alt="robinson">
+                    <div class="card-body">
+                      <h5 class="card-title">ROBINSON</h5>
+                      <p class="card-text">Hai kamu, robinson sedang menunggu teman bermain. Apakah kamu ingin menjadi teman robinson dan berbagi canda dan tawa? Ayo adopsi robinson sekarang.</p>
+                      <a href="detailPageRobinson.html" class="btn btn-primary">Lihat Detail</a>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div class="col-md-4">
+                <li>
+                  <div class="card">
+                    <img src="./assets/images/yuki-dog-dkulmTU4rss-unsplash.jpg" class="card-img-top" alt="yuki">
+                    <div class="card-body">
+                      <h5 class="card-title">YUKI</h5>
+                      <p class="card-text">Hai kamu, yuki sedang menunggu teman bermain. Apakah kamu ingin menjadi teman yuki dan berbagi canda dan tawa? Ayo adopsi yuki sekarang.</p>
+                      <a href="detailPageYuki.html" class="btn btn-primary">Lihat Detail</a>
+                    </div>
+                  </div>
+                </li>
+              </div>
+          </ul>
+        </div>
+      </section>
+        
+      <section>
+              <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                      <a class="page-link" href="daftarhewan3.html" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="daftarhewan.html">
+                        <span class="page-link">1 <span class="sr-only"></span> </span> </a></li>
+                    <li class="page-item"><a class="page-link" href="daftarhewan2.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="daftarhewan3.html">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="daftarhewan2.html">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+      </section>
+
+      <br/><br/>
+
+      <div class="jumbotron footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 footer-left">
+                    <h6 class="footer-title">Contact Us</h6><br/>
+                    <p class="footer-subtitle">+62 811 5338 123</p>
+                    <p class="footer-subtitle">sobathewan@gmail.com</a>
+                    <p class="footer-subtitle">12, Petisah, Medan, Indonesia</p>
+                </div>
+                <div class="col-md-6 footer-right">
+                    <h6 class="footer-title">Social Media</h6>
+                    <div class="social-media">
+                        <a href="https://facebook.com" class="link-to-social-media">
+                            <img src="assets/images/socialmedia/facebook-logo.png" width="70"px/>
+                        </a>
+                        <a href="https://instagram.com" class="link-to-social-media">
+                            <img src="assets/images/socialmedia/instagram-logo.png" width="70"px/>
+                        </a>
+                        <a href="https://twitter.com" class="link-to-social-media">
+                            <img src="assets/images/socialmedia/twitter-logo.png" width="70"px/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
